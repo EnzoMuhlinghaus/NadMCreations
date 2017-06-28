@@ -1,0 +1,10 @@
+name: NadMCreations
+description: 'html5 bootstrap masonry.'
+author: 'Enzo Muhlinghaus'
+homepage: 'https://enzomuhlinghaus.com'
+form:
+    fields:
+        site_name:
+            label: NadMCreations
+            comment: 'The website name as it should appear on the front-end'
+            default: ''
