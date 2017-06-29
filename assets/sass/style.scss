@@ -4,7 +4,7 @@ $font-monsterrat: 'Montserrat', arial, sans-serif;
 $font-roboto: 'Roboto', arial, sans-serif;
 
 // Overrides
-$grid-gutter-width: 40px !default; 
+$grid-gutter-width: 40px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
@@ -25,12 +25,26 @@ $form-group-margin-bottom:       30px !default;
 $navbar-height:                  60px !default;
 
 // Mixin
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
 @mixin transition($transition) {
     -moz-transition:    $transition;
     -o-transition:      $transition;
     -webkit-transition: $transition;
     -ms-transition: $transition;
     transition:         $transition;
+}
+@mixin translateX($px) {
+  -webkit-transform: translateX($px);
+  -moz-transform: translateX($px);
+  -ms-transform: translateX($px);
+  -o-transform: translateX($px);
+  transform: translateX($px);
 }
 @mixin inline-block() {
 	display:-moz-inline-stack;
@@ -56,7 +70,7 @@ $navbar-height:                  60px !default;
 }
 
 @mixin icomoon() {
-	
+
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -68,7 +82,7 @@ $navbar-height:                  60px !default;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
+
 }
 
 // Import Bootstrap
@@ -121,30 +135,34 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 88;
 	top: 0;
 	right: 0;
-	@include transition(.5s);
-	-webkit-transform: translateX(320px);
-	-moz-transform: translateX(320px);
-	-ms-transform: translateX(320px);
-	-o-transform: translateX(320px);
-	transform: translateX(320px);
-	bottom: 0;
+	@include transition(transform .3s, box-shadow .7s);
+    @include translateX(320px);
 	width: 300px;
-	padding: 40px 30px;
+	padding: 40px 30px 8% 30px;
 	 //background: $brand-bg-color;
 	//background: $brand-white;
 
+    .fh5co-social-icons {
+        @include translateX(300px);
+        @include transition(.3s);
+    }
+
 	.fh5co-lead {
+        @include translateX(300px);
+        @include transition(.3s);
 		font-size: 12px;
 		letter-spacing: 2px;
 		color: $brand-gray;
 		text-transform: uppercase;
-		margin-bottom: 20px;	
+		margin-bottom: 20px;
 	}
 	ul {
 		padding: 0;
 		margin: 0 0 30px 0;
 		li {
-			padding: 0;
+            @include translateX(300px);
+            @include transition(.3s);
+			padding: 5px 0;
 			margin: 0;
 			list-style: none;
 			a {
@@ -167,17 +185,44 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 	&.fh5co-awake {
-		-webkit-transform: translateX(0px);
-		-moz-transform: translateX(0px);
-		-ms-transform: translateX(0px);
-		-o-transform: translateX(0px);
-		transform: translateX(0px);
+      @include translateX(0px);
+      @include box-shadow(0 0 1px 0 rgba(0, 0, 0, 0.3));
 
-      -webkit-box-shadow: 0 0 1px 0 rgba(0,0,0,.3);
-      -moz-box-shadow: 0 0 1px 0 rgba(0,0,0,.3);
-      -ms-box-shadow: 0 0 1px 0 rgba(0,0,0,.3);
-      box-shadow: 0 0 1px 0 rgba(0,0,0,.3);
+      .fh5co-logo {
+        @include translateX(0);
+        transition-delay: 0.05s;
+      }
+
+      ul{
+        li{
+          @include translateX(0);
+          &:nth-child(1){
+            transition-delay: 0.10s;
+          }
+          &:nth-child(2){
+            transition-delay: 0.15s;
+          }
+          &:nth-child(3){
+            transition-delay: 0.20s;
+          }
+          &:nth-child(4){
+            transition-delay: 0.25s;
+          }
+        }
+      }
+
+      .fh5co-lead{
+        @include translateX(0);
+        transition-delay: 0.30s;
+      }
+
+      .fh5co-social-icons{
+        @include translateX(0);
+        transition-delay: 0.35s;
+      }
+
 	}
+
 	.fh5co-offcanvass-close {
 		position: absolute;
 		right: 20px;
@@ -202,6 +247,8 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 	.fh5co-logo {
+        @include translateX(300px);
+        @include transition(.3s);
 		display: block;
 		float: left;
 		width: 100%;
@@ -210,7 +257,7 @@ h1, h2, h3, h4, h5, h6 {
 		letter-spacing: 1px;
 		font-weight: bold;
 		padding: 0;
-		margin: 40px 0 0 0;	
+		margin: 40px 0 0 0;
 		a {
 			color: $brand-black;
 			padding: 0;
@@ -284,9 +331,9 @@ h1, h2, h3, h4, h5, h6 {
 				color: $brand-black;
 				font-weight: normal;
 				font-family: $font-monsterrat;
-				
+
 				> span {
-					
+
 					.border {
 						display: block;
 						height: 3px;
@@ -336,7 +383,7 @@ h1, h2, h3, h4, h5, h6 {
 							}
 						}
 					}
-					
+
 				}
 			}
 			&.active {
@@ -344,7 +391,7 @@ h1, h2, h3, h4, h5, h6 {
 					background: transparent;
 					> span {
 						.border {
-							background: $brand-primary;	
+							background: $brand-primary;
 						}
 					}
 				}
@@ -413,7 +460,7 @@ h1, h2, h3, h4, h5, h6 {
 		.fh5co-hero-intro {
 			display: table-cell;
 			vertical-align: middle;
-			
+
 			.fh5co-lead, .fh5co-sub-lead {
 				color: $brand-white;
 				margin: 0;
@@ -483,7 +530,7 @@ h1, h2, h3, h4, h5, h6 {
 		.fh5co-board-img {
 			border-top-left-radius: 4px;
 			border-top-right-radius: 4px;
-			overflow: hidden; 
+			overflow: hidden;
 		}
 		.image-popup {
     		&:hover {
@@ -565,18 +612,18 @@ pre {
 	background: $brand-warning;
 	border: 2px solid $brand-warning;
 }
-.btn-primary, 
-.btn-success, 
-.btn-info, 
-.btn-warning, 
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
 .btn-danger {
 	border-color: transparent;
 }
-.btn-default, 
-.btn-primary, 
-.btn-success, 
-.btn-info, 
-.btn-warning, 
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
 .btn-danger {
 	&:hover, &:active, &:focus {
 		background: $brand-darker;
@@ -590,7 +637,7 @@ pre {
 	border: 2px solid $brand-darker;
 	background: transparent;
 	font-family: $font-monsterrat;
-	&:hover, 
+	&:hover,
 	&:focus,
 	&:active {
 		outline: none;
@@ -639,7 +686,7 @@ pre {
 			// color: $brand-primary;
 		}
 	}
-	
+
 	.fh5co-footer-widget {
 		padding-right: 30px!important;
 		float: left;
@@ -710,7 +757,7 @@ pre {
 	@include border-radius(4px);
 	h3 {
 		border-bottom: 1px solid #e7e7e7;
-		
+
 		font-size: 18px;
 		margin: 0 0 20px 0;
 		padding: 0 0 10px 0;
@@ -854,7 +901,7 @@ pre {
 		margin-top: 5px;
 		i:before {
 			color: $brand-primary;
-		
+
 		}
 	}
 }
@@ -867,7 +914,7 @@ pre {
 	}
 	&:hover {
 		i {
-			color: $brand-black;		
+			color: $brand-black;
 		}
 	}
 }
@@ -906,7 +953,7 @@ pre {
 	text-align: center;
 }
 .owl-carousel-fullwidth.owl-theme .owl-dots {
-	bottom: 0;	
+	bottom: 0;
 	margin-bottom: 2.5em;
 }
 .owl-theme .owl-dots .owl-dot span {
@@ -933,7 +980,7 @@ pre {
 		width: 100%;
 	}
 	.item {
-		
+
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top left;
@@ -1024,7 +1071,7 @@ pre {
 
 img {
 	&.fh5co-align-right {
-		float:right; 
+		float:right;
 		margin:0 0 .5em 1em;
 		@media screen and (max-width: $screen-xs) {
 			width: 100%;

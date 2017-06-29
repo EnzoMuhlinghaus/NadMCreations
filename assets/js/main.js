@@ -18,6 +18,7 @@
     var from = path.attr("d");
     var to = path.data("to");
     var s = Snap.select("#wave path");
+    var time = 350;
 
 	// OffCanvass
 	var offCanvass = function() {
@@ -28,7 +29,7 @@
 
                 s.animate({
                     d: from
-                },450, mina.easeinout);
+                },time, mina.easeinout);
 
                 $('#fh5co-offcanvass').removeClass('fh5co-awake');
             }
@@ -36,7 +37,7 @@
 
                 s.animate({
                     d: to
-                },450, mina.easeinout);
+                },time, mina.easeinout);
 
                 $('#fh5co-offcanvass').addClass('fh5co-awake');
             }
@@ -53,7 +54,7 @@
 
                     s.animate({
                         d: from
-                    },450, mina.easeinout);
+                    },time, mina.easeinout);
 
                     $('#fh5co-offcanvass').removeClass('fh5co-awake');
                 }
@@ -63,6 +64,11 @@
 		$(window).scroll(function(){
 			if ( $(window).scrollTop() > 500 ) {
 				if ( $('#fh5co-offcanvass').hasClass('fh5co-awake') ) {
+
+                    s.animate({
+                        d: from
+                    },time, mina.easeinout);
+
 		    		$('#fh5co-offcanvass').removeClass('fh5co-awake');
 		    	}
 	    	}

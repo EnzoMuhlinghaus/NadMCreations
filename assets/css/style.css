@@ -5868,18 +5868,34 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 88;
   top: 0;
   right: 0;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: transform 0.3s, box-shadow 0.7s;
+  -o-transition: transform 0.3s, box-shadow 0.7s;
+  transition: transform 0.3s, box-shadow 0.7s;
   -webkit-transform: translateX(320px);
   -moz-transform: translateX(320px);
   -ms-transform: translateX(320px);
   -o-transform: translateX(320px);
   transform: translateX(320px);
-  bottom: 0;
   width: 300px;
-  padding: 40px 30px; }
+  padding: 40px 30px 8% 30px; }
+  #fh5co-offcanvass .fh5co-social-icons {
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    -o-transform: translateX(300px);
+    transform: translateX(300px);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
   #fh5co-offcanvass .fh5co-lead {
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    -o-transform: translateX(300px);
+    transform: translateX(300px);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
     font-size: 12px;
     letter-spacing: 2px;
     color: #ccc;
@@ -5889,7 +5905,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0 0 30px 0; }
     #fh5co-offcanvass ul li {
-      padding: 0;
+      -webkit-transform: translateX(300px);
+      -moz-transform: translateX(300px);
+      -ms-transform: translateX(300px);
+      -o-transform: translateX(300px);
+      transform: translateX(300px);
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      padding: 5px 0;
       margin: 0;
       list-style: none; }
       #fh5co-offcanvass ul li a {
@@ -5911,9 +5935,42 @@ h1, h2, h3, h4, h5, h6 {
     -o-transform: translateX(0px);
     transform: translateX(0px);
     -webkit-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
-    -ms-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3); }
+    #fh5co-offcanvass.fh5co-awake .fh5co-logo {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0);
+      transition-delay: 0.05s; }
+    #fh5co-offcanvass.fh5co-awake ul li {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0); }
+      #fh5co-offcanvass.fh5co-awake ul li:nth-child(1) {
+        transition-delay: 0.10s; }
+      #fh5co-offcanvass.fh5co-awake ul li:nth-child(2) {
+        transition-delay: 0.15s; }
+      #fh5co-offcanvass.fh5co-awake ul li:nth-child(3) {
+        transition-delay: 0.20s; }
+      #fh5co-offcanvass.fh5co-awake ul li:nth-child(4) {
+        transition-delay: 0.25s; }
+    #fh5co-offcanvass.fh5co-awake .fh5co-lead {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0);
+      transition-delay: 0.30s; }
+    #fh5co-offcanvass.fh5co-awake .fh5co-social-icons {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0);
+      transition-delay: 0.35s; }
   #fh5co-offcanvass .fh5co-offcanvass-close {
     position: absolute;
     right: 20px;
@@ -5935,6 +5992,14 @@ h1, h2, h3, h4, h5, h6 {
       outline: none;
       text-decoration: none; }
   #fh5co-offcanvass .fh5co-logo {
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    -o-transform: translateX(300px);
+    transform: translateX(300px);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
     display: block;
     float: left;
     width: 100%;
