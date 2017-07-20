@@ -1,5 +1,6 @@
 <template>
   <div class="creations">
+    <h1>Créations</h1>
     <ul>
       <li v-for="creation in creations">{{ creation.title }}</li>
     </ul>
