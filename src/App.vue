@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Sidebar</h1>
+    <top></top>
     <sidebar></sidebar>
     <br>
     <router-view></router-view>
@@ -9,12 +9,16 @@
 
 <script>
 import Sidebar from '@/components/Sidebar'
+import Top from '@/components/Top'
 
 export default {
   name: 'app',
-  components: { Sidebar }
+  components: {
+    Sidebar,
+    Top
+  }
 }
 </script>
 
-<style src="./assets/styles/base.scss" lang="scss" scoped></style>
+<style src="./assets/styles/base.scss" lang="scss"></style>
 

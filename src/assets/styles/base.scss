@@ -1,17 +1,21 @@
-@import "font";
 @import "variables";
 
-#app{
-  body {
-    //font-family: $font-roboto;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 26px;
-    color: $brand-body-color;
-    background: $brand-bg-color;
-  }
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-roboto;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  color: $brand-body-color;
+  background: $brand-bg-color;
+  margin: 0;
+
+  text-align: center;
+
   a {
     @include transition(.5s);
+    text-decoration: none;
     &:hover, &:active, &:focus {
       outline: none;
     }
@@ -22,7 +26,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     color: $brand-black;
-    //font-family: $font-monsterrat;
+    font-family: $font-monsterrat;
   }
   ::-webkit-selection {
     color: $brand-body-color;
@@ -37,5 +41,16 @@
   ::selection {
     color: $brand-body-color;
     background: $brand-selection-color;
+  }
+
+  .social-icons {
+    a {
+      padding: 4px 10px;
+      color: $brand-primary;
+      &:hover, &:focus, &:active {
+        text-decoration: none;
+        color: $brand-darker;
+      }
+    }
   }
 }

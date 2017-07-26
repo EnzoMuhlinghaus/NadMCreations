@@ -1,36 +1,24 @@
 @import "variables";
 
 .sidebar {
+  height: 100vh;
   position: fixed;
   text-align: center;
   z-index: 88;
   top: 0;
   right: 0;
   @include transition(transform .3s, box-shadow .7s);
-  @include translateX(320px);
+  @include translateX(360px);
   width: 300px;
-  padding: 40px 30px 8% 30px;
-  //background: $brand-bg-color;
-  //background: $brand-white;
+  background: $brand-white;
 
   &__social-icons {
     @include translateX(300px);
     @include transition(all .3s);
   }
 
-  &__lead {
-    @include translateX(300px);
-    @include transition(.3s);
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: $brand-gray;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-
   &__menu {
-    padding: 0;
-    margin: 0 0 30px 0;
+    padding: 10px 30px;
     li {
       @include translateX(300px);
       @include transition(.3s);
@@ -61,14 +49,14 @@
     @include translateX(300px);
     @include transition(.3s);
     display: block;
-    float: left;
     width: 100%;
     text-transform: uppercase;
     color: $brand-black;
     letter-spacing: 1px;
     font-weight: bold;
     padding: 0;
-    margin: 40px 0 0 0;
+    margin: 80px 0 20px 0;
+    font-size: 20px;
     a {
       color: $brand-black;
       padding: 0;
@@ -123,20 +111,28 @@
     text-transform: uppercase;
     font-size: 15px;
     letter-spacing: 2px;
-    //font-family: $font-monsterrat;
+    font-family: $font-monsterrat;
     z-index: 99;
-    float: left;
     color: $brand-darker;
     i {
       font-size: 20px;
       margin-top: 3px;
-      float: right;
-      margin-left: 10px;
       color: red;
     }
     &:hover, &:focus, &:active {
       outline: none;
       text-decoration: none;
+    }
+  }
+
+  &__credits{
+    position: absolute;
+    bottom: 30px;
+    display: block;
+    width: 100%;
+
+    a{
+      color: $brand-primary;
     }
   }
 

@@ -1,3 +1,8 @@
+@import "font";
+
+$font-monsterrat: 'Montserrat', arial, sans-serif;
+$font-roboto: 'Roboto', arial, sans-serif;
+
 $brand-primary: #EF5353 !default;
 $brand-white: #fff;
 $brand-black: #000;
@@ -35,27 +40,11 @@ $brand-bg-color: #f5f6f7;
   display:-moz-inline-stack;
   display:inline-block;
   zoom:1;
-  *display:inline;
+  display:inline;
 }
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   border-radius: $radius;
-}
-
-@mixin icomoon() {
-
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
 }
