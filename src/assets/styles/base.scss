@@ -1,0 +1,41 @@
+@import "font";
+@import "variables";
+
+#app{
+  body {
+    //font-family: $font-roboto;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 26px;
+    color: $brand-body-color;
+    background: $brand-bg-color;
+  }
+  a {
+    @include transition(.5s);
+    &:hover, &:active, &:focus {
+      outline: none;
+    }
+  }
+  p {
+    margin-bottom: 1.5em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $brand-black;
+    //font-family: $font-monsterrat;
+  }
+  ::-webkit-selection {
+    color: $brand-body-color;
+    background: $brand-selection-color;
+  }
+
+  ::-moz-selection {
+    color: $brand-body-color;
+    background: $brand-selection-color;
+  }
+
+  ::selection {
+    color: $brand-body-color;
+    background: $brand-selection-color;
+  }
+}
