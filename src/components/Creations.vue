@@ -1,12 +1,9 @@
 <template>
-  <div class="creations">
-    <h1>Créations</h1>
-    <ul>
-      <li v-for="creation in creations">
+  <div class="creations" data-columns="4">
+      <div v-for="creation in creations" class="column size-lof4">
         <h3>{{ creation.title }}</h3>
         <img :src="creation.image" alt="">
-      </li>
-    </ul>
+      </div>
   </div>
 </template>
 
