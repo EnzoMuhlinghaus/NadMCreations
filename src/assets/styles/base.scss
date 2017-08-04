@@ -10,8 +10,11 @@ body{
   color: $brand-body-color;
   background: $brand-bg-color;
   margin: 0;
-
   text-align: center;
+
+  .container{
+    padding-left: 300px;
+  }
 
   a {
     @include transition(.5s);
