@@ -23,12 +23,13 @@ $brand-bg-color: #f5f6f7;
 }
 
 @mixin transition($transition...) {
-  -moz-transition:    $transition;
-  -o-transition:      $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
   -webkit-transition: $transition;
   -ms-transition: $transition;
-  transition:         $transition;
+  transition: $transition;
 }
+
 @mixin translateX($px) {
   -webkit-transform: translateX($px);
   -moz-transform: translateX($px);
@@ -36,15 +37,40 @@ $brand-bg-color: #f5f6f7;
   -o-transform: translateX($px);
   transform: translateX($px);
 }
+
 @mixin inline-block() {
-  display:-moz-inline-stack;
-  display:inline-block;
-  zoom:1;
-  display:inline;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
 }
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   border-radius: $radius;
+}
+
+@mixin animation($animation...){
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+//animations
+@keyframes itemFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fade-enter-active {
+  @include animation(itemFadeIn .5s)
 }

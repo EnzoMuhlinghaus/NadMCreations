@@ -6,10 +6,10 @@
   text-align: center;
   z-index: 88;
   top: 0;
-  left: 0;
+  right: 0;
   @include transition(transform .3s, box-shadow .7s);
   @include translateX(360px);
-  width: 300px;
+  width: 250px;
   background: $brand-white;
 
   &__social-icons {

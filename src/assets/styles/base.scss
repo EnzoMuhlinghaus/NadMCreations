@@ -12,47 +12,48 @@ body{
   margin: 0;
   text-align: center;
 
-  .container{
-    padding-left: 300px;
-  }
+  #app{
+    position: relative;
+    height: 100%;
 
-  a {
-    @include transition(.5s);
-    text-decoration: none;
-    &:hover, &:active, &:focus {
-      outline: none;
-    }
-  }
-  p {
-    margin-bottom: 1.5em;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $brand-black;
-    font-family: $font-monsterrat;
-  }
-  ::-webkit-selection {
-    color: $brand-body-color;
-    background: $brand-selection-color;
-  }
-
-  ::-moz-selection {
-    color: $brand-body-color;
-    background: $brand-selection-color;
-  }
-
-  ::selection {
-    color: $brand-body-color;
-    background: $brand-selection-color;
-  }
-
-  .social-icons {
     a {
-      padding: 4px 10px;
-      color: $brand-primary;
-      &:hover, &:focus, &:active {
-        text-decoration: none;
-        color: $brand-darker;
+      @include transition(.5s);
+      text-decoration: none;
+      &:hover, &:active, &:focus {
+        outline: none;
+      }
+    }
+    p {
+      margin-bottom: 1.5em;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $brand-black;
+      font-family: $font-monsterrat;
+    }
+    ::-webkit-selection {
+      color: $brand-body-color;
+      background: $brand-selection-color;
+    }
+
+    ::-moz-selection {
+      color: $brand-body-color;
+      background: $brand-selection-color;
+    }
+
+    ::selection {
+      color: $brand-body-color;
+      background: $brand-selection-color;
+    }
+
+    .social-icons {
+      a {
+        padding: 4px 10px;
+        color: $brand-primary;
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+          color: $brand-darker;
+        }
       }
     }
   }

@@ -1,6 +1,6 @@
 <template>
-  <header class="sidebar awake">
-    <a href="#" class="sidebar__close">Menu <i class="fa fa-times"></i> </a>
+  <header class="sidebar" :class="{ awake: awake }" >
+    <a href="#" class="sidebar__close" @click="wake">Menu <i class="fa fa-times"></i> </a>
     <h1 class="sidebar__logo">
       <router-link :to="{name: 'Home'}" tag="a">{{ site_name }}</router-link>
     </h1>
@@ -34,7 +34,7 @@
          preserveAspectRatio="none">
       <path
         d="M200,0c0,0 -200,46.405 -200,177c0,130.595 126.228,90.241 149,287c22.772,196.759 51,436 51,436l32,0l-4,-900l-28,0Z"
-        data-to="M0,0c0,0 0,46.405 0,177c0,130.595 1.152,98.101 0,296c-1.153,198.07 0,427 0,427l200,0l0,-900l-200,0Z"/>
+        data-to="M0,0c0,0 0,46.405 0,177c0,130.595 1.152,98.101 0,296c-1.153,198.07 0,427 0,427l200,0l0,-900l-200,0Z"></path>
     </svg>
   </header>
 
@@ -43,6 +43,13 @@
 <script>
   export default {
     name: 'sidebar',
+    props: ['awake'],
+    methods: {
+      wake () {
+        let mutableAwake = !this.awake
+        this.$emit('woken', mutableAwake)
+      }
+    },
     data () {
       return {
         site_name: 'NADMCREATIONS'
