@@ -11,10 +11,16 @@ body{
   background: $brand-bg-color;
   margin: 0;
   text-align: center;
+  position: relative;
+  height: 100%;
 
   #app{
     position: relative;
     height: 100%;
+
+    .container{
+      padding-left: 280px;
+    }
 
     a {
       @include transition(.5s);

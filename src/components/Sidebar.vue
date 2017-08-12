@@ -1,6 +1,6 @@
 <template>
-  <header class="sidebar" :class="{ awake: awake }" >
-    <a href="#" class="sidebar__close" @click="wake">Menu <i class="fa fa-times"></i> </a>
+  <header class="sidebar awake" :class="{ awake: awake }" >
+    <!--<a href="#" class="sidebar__close" @click="wake">Menu <i class="fa fa-times"></i> </a>-->
     <h1 class="sidebar__logo">
       <router-link :to="{name: 'Home'}" tag="a">{{ site_name }}</router-link>
     </h1>

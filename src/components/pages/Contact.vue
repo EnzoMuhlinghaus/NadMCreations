@@ -1,6 +1,8 @@
 <template>
   <div class="contact">
-    <h1>Contact</h1>
+    <transition name="fade" appear>
+      <h1>Contact</h1>
+    </transition>
   </div>
 
 </template>

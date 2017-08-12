@@ -1,12 +1,12 @@
 <template>
   <div>
     <sidebar :awake=awake @woken="onWake"></sidebar>
-    <transition name="fade" appear>
-      <div class="top">
-        <a class="top__logo" href="/">{{ site_name }}</a>
-        <a href="#" class="top__menu-btn" @click="awake = !awake">Menu <i class="fa fa-bars"></i></a>
-      </div>
-    </transition>
+    <!--<transition name="fade" appear>-->
+      <!--<div class="top">-->
+        <!--<a class="top__logo" href="/">{{ site_name }}</a>-->
+        <!--<a href="#" class="top__menu-btn" @click="awake = !awake">Menu <i class="fa fa-bars"></i></a>-->
+      <!--</div>-->
+    <!--</transition>-->
   </div>
 </template>
 

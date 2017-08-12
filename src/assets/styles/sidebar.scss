@@ -6,10 +6,10 @@
   text-align: center;
   z-index: 88;
   top: 0;
-  right: 0;
+  left: 0;
   @include transition(transform .3s, box-shadow .7s);
   @include translateX(360px);
-  width: 250px;
+  width: 280px;
   background: $brand-white;
 
   &__social-icons {
@@ -69,7 +69,7 @@
 
   &.awake {
     @include translateX(0px);
-    @include box-shadow(0 0 1px 0 rgba(0, 0, 0, 0.3));
+    @include box-shadow(0 0 7px rgba(0,0,0,0.1));
 
     .sidebar{
       &__logo {

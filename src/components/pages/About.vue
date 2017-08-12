@@ -1,6 +1,8 @@
 <template>
   <div class="about">
-    <h1>About</h1>
+    <transition name="fade" appear>
+      <h1>About</h1>
+    </transition>
   </div>
 </template>
 
