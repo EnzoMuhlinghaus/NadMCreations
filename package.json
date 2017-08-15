@@ -1,7 +1,7 @@
 {
   "name": "nadmcreations",
   "version": "1.0.0",
-  "description": "Blog using Vue.js and an OctoberCMS API",
+  "description": "Blog using Vue.js and OctoberCMS API",
   "author": "Enzo Muhlinghaus <contact@enzomuhlinghaus.com>",
   "private": true,
   "scripts": {

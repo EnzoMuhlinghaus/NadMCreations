@@ -63,7 +63,7 @@ $brand-bg-color: #f5f6f7;
 @keyframes itemFadeIn {
   0% {
     opacity: 0;
-    transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 15px, 0);
   }
   100% {
     opacity: 1;
@@ -72,5 +72,9 @@ $brand-bg-color: #f5f6f7;
 }
 
 .fade-enter-active {
-  @include animation(itemFadeIn .5s)
+  @include animation(itemFadeIn 1s)
+}
+
+.longFade-enter-active {
+  @include animation(itemFadeIn 2s)
 }
