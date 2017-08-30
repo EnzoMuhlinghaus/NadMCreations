@@ -1,10 +1,10 @@
 @import "variables";
 
 .top{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-items: center;
+  //display: flex;
+  //flex-flow: row nowrap;
+  //justify-content: flex-end;
+  //align-items: center;
   width: 100%;
   position: relative;
   padding-top: 4em;
@@ -25,6 +25,18 @@
     font-family: $font-monsterrat;
     color: $brand-black;
     padding: 20px;
+
+    a{
+      &:focus{
+        color: $brand-black;
+      }
+      &:visited{
+        color: $brand-black;
+      }
+      &:active{
+        color: $brand-black;
+      }
+    }
 
     &:hover {
       color: lighten($brand-black, 25%);

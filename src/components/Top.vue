@@ -2,10 +2,12 @@
   <div>
     <sidebar :awake=awake @woken="onWake"></sidebar>
     <!--<transition name="fade" appear>-->
-      <!--<div class="top">-->
-        <!--<a class="top__logo" href="/">{{ site_name }}</a>-->
+      <div class="top">
+        <h1 class="top__logo">
+          <router-link :to="{name: 'Home'}" tag="a">{{ site_name }}</router-link>
+        </h1>
         <!--<a href="#" class="top__menu-btn" @click="awake = !awake">Menu <i class="fa fa-bars"></i></a>-->
-      <!--</div>-->
+      </div>
     <!--</transition>-->
   </div>
 </template>
